@@ -6,14 +6,14 @@
 	<title>Matching Game</title>
 	<link rel="stylesheet" href="css/style.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
+        <!-- consider moving script tag before closing body tag to prevent blocking -->
 	<link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 	<header>
 		<h1 class = "flyingdiv2"> Mona Match Me </h1>
-		<!-- <img src = "img/lisa.jpeg" class = "sidepic"/> -->
+		<!-- <img src = "img/lisa.jpeg" class = "sidepic"/> remove unused code -->
 	</header>
 	<div id="wrapper">
 		<div id="holder" class="timerstop">
@@ -89,6 +89,10 @@
 			<div class="card two">
 				<img src="img/two.png" alt = "two" />
 			</div>
+			<!-- can you think of a way to generate the above HTML using javascript? 
+			     This will allow you to build functionality that lets the user choose
+			     the number of cards shown / set difficulty level.
+			-->
 		</div>
 		<span id="counter"></span>
 		<button id="reset"> RESET </button>
@@ -97,6 +101,7 @@
 		</div>
 		</div>
 	<footer>
+	<!-- remove unused code -->
 	</footer>
 	<script type="text/javascript" src="script.js"></script>
 </body>

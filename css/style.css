@@ -24,6 +24,7 @@
 .alignleft {
   float: left;
   padding: 0 10px 10px 0;
+  /* excellent reusable classes! */
 }
 html {
   background-color: white;
@@ -86,6 +87,7 @@ h2 {
 }
 #sidebar {
   /*border: 1px solid black;
+   * please remove commented out code in the future.
   background: gray;*/
   opacity: .8;
   height: 7em;
@@ -118,7 +120,8 @@ button {
   border-radius: 5px;
   margin: 1em;
   background-image: -webkit-linear-gradient(top, #e07c45, #dbc1a2);
-  font-family: Arial;
+  /* what about non-webkit browsers? */
+  font-family: Arial /* remember to provide fallback fonts */;
   font-size: 12px;
   font-weight: bold;
   color:black;

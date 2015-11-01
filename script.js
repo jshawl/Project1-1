@@ -1,6 +1,6 @@
 var numberOfTurns = 0;
 var seconds = 0
-var timerId;
+var timerId; // clicking on a card briefly hides the timer, but it resumes right after. I wonder what's causing that?
 //function to shuffle the order of the cards on the page.
 function shuffleCards(cards) {
   var currentIndex = cards.length;
@@ -26,7 +26,9 @@ function checkMatch(card1, card2) {
 }
 
 //function to see if game is over, and if so executes some new HTML on page
+// excellent code comments! Makes reading your code a breeze.
 function checkEnd() {
+  // consider setting up variables for these jQuery Selectors
   if ($('.matched').length == $('.card').length) {
     $("h2").removeClass("timer");
     $("h1").empty();
@@ -38,8 +40,6 @@ function checkEnd() {
 }
 $(function(){
     $(".flyingdiv").addClass("active");
-});
-$(function(){
     $(".flyingdiv2").addClass("active2");
 });
 var updateTime = function() {
@@ -53,6 +53,7 @@ var startButton = function() {
   }
   clearInterval(timerId)
   timerId = setInterval(updateTime, 1000)
+  // still not sure what's causing the timer flash on card click.
 };
 //sets up to play the game - shuffles board, hides card faces, adds class of 'selected' to chosen cards, checks for a match by comparing class
 $(document).ready(function() {
